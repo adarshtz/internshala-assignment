@@ -209,23 +209,19 @@ const User = () => {
         {/* Page header */}
         <h1 className="text-2xl font-bold mb-4">Users</h1>
 
-        {/* Logout button */}
-        <div className="flex justify-between items-center">
-          <Button
-            onClick={handleLogout}
-            variant="destructive"
-            className="ml-auto"
-          >
-            Logout
-          </Button>
-        </div>
-
         {/* Page description */}
         <p className="mb-4 text-gray-600">
           This page displays a list of users fetched from an API. You can
           navigate through pages using the "Previous" and "Next" buttons, and
           delete users using the dropdown menu on each card.
         </p>
+
+        {/* Logout button */}
+        <div className="flex justify-between items-center">
+          <Button onClick={handleLogout} className="my-1 mb-4 bg-black">
+            Logout
+          </Button>
+        </div>
 
         {/* Search input */}
         <Input

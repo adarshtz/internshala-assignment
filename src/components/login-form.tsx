@@ -19,6 +19,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner"; // Import toast from sonner
 
 const formSchema = z.object({
   email: z.string().email({
@@ -66,12 +67,17 @@ export function LoginForm({
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
-        console.error(
-          "Error during login:",
-          error.response?.data || error.message
-        );
+        const errorMessage =
+          error.response?.data?.error || "An error occurred during login.";
+        console.error("Error during login:", errorMessage);
+
+        // Show toast notification for error
+        toast.error(errorMessage);
       } else {
         console.error("Unexpected error:", error);
+
+        // Show toast notification for unexpected error
+        toast.error("Unexpected error occurred. Please try again.");
       }
     }
   }
