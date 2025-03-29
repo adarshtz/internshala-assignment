@@ -43,9 +43,5 @@ The project is deployed on Netlify and can be accessed at [internshala-adarshtz.
 
 Contributions are welcome! Feel free to fork the repository and submit a pull request with your improvements.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ---
 Thank you for visiting the project! If you have any questions or feedback, please feel free to reach out.
